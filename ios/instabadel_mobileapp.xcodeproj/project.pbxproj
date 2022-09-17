@@ -24,6 +24,7 @@
 		1E5EAF0F28AA5E5100CE0523 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E5EAEEE28AA5E1200CE0523 /* Roboto-Regular.ttf */; };
 		1E5EAF1028AA5E5100CE0523 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E5EAEF628AA5E1200CE0523 /* Roboto-Thin.ttf */; };
 		1E5EAF1128AA5E5100CE0523 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E5EAEF228AA5E1200CE0523 /* Roboto-ThinItalic.ttf */; };
+		1ECDE7E028D65794001903DC /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 1ECDE7DF28D65794001903DC /* assets */; };
 		77A8C3F8D7A8264978E8D534 /* libPods-instabadel_mobileapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11187DD0BD4A7914152A1E3E /* libPods-instabadel_mobileapp.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		FA6FF97299084FC5BCD6AF87 /* libPods-instabadel_mobileapp-instabadel_mobileappTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CA6D09C857CA6D3469578D /* libPods-instabadel_mobileapp-instabadel_mobileappTests.a */; };
@@ -64,6 +65,7 @@
 		1E5EAEF628AA5E1200CE0523 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		1E5EAEF728AA5E1200CE0523 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
 		1E5EAEF828AA5E1200CE0523 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		1ECDE7DF28D65794001903DC /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		4B991CE4F77C3D1AA750228D /* Pods-instabadel_mobileapp-instabadel_mobileappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instabadel_mobileapp-instabadel_mobileappTests.release.xcconfig"; path = "Target Support Files/Pods-instabadel_mobileapp-instabadel_mobileappTests/Pods-instabadel_mobileapp-instabadel_mobileappTests.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = instabadel_mobileapp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6F07333D3FF775BFA7AB241 /* Pods-instabadel_mobileapp-instabadel_mobileappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instabadel_mobileapp-instabadel_mobileappTests.debug.xcconfig"; path = "Target Support Files/Pods-instabadel_mobileapp-instabadel_mobileappTests/Pods-instabadel_mobileapp-instabadel_mobileappTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				1ECDE7DF28D65794001903DC /* assets */,
 				1E5EAF0528AA5E3800CE0523 /* Resources */,
 				13B07FAE1A68108700A75B9A /* instabadel_mobileapp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -289,6 +292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ECDE7E028D65794001903DC /* assets in Resources */,
 				1E5EAF0628AA5E5100CE0523 /* Roboto-Black.ttf in Resources */,
 				1E5EAF0728AA5E5100CE0523 /* Roboto-BlackItalic.ttf in Resources */,
 				1E5EAF0828AA5E5100CE0523 /* Roboto-Bold.ttf in Resources */,
