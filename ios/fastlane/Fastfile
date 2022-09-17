@@ -48,7 +48,7 @@ platform :ios do
   end
   lane :version do |options|
     updateVersion(options)
-    increment_build_number(xcodeproj: '[Your Project Name].xcodeproj')
+    increment_build_number(xcodeproj: "instabadel_mobileapp.xcodeproj")
   end
   lane :github do |_options|
     create_keychain(
@@ -77,6 +77,8 @@ platform :ios do
       issuer_id: '69a6de96-5758-47e3-e053-5b8c7c11a4d1',
       key_filepath: 'distribution.p8'
     )
+    increment_build_number(xcodeproj: "instabadel_mobileapp.xcodeproj")
+
     # build_app(workspace: '[Your Project Name].xcworkspace', scheme: '[Your Project Name]')
      build_app(workspace: "instabadel_mobileapp.xcworkspace", scheme: "instabadel_mobileapp", clean: true,
       export_method: "app-store",
