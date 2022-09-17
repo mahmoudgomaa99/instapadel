@@ -12,6 +12,4 @@ import {gestureHandlerRootHOC} from 'react-native-gesture-handler';
 Navigation.registerComponent('com.myApp.WelcomeScreen', () =>
   gestureHandlerRootHOC(App),
 );
-
-
 AppRegistry.registerComponent(appName, () => App);
