@@ -68,7 +68,7 @@ platform :ios do
     install_provisioning_profile(path: 'distribution.mobileprovision')
     update_project_provisioning(
       xcodeproj: 'instabadel_mobileapp.xcodeproj',
-      target_filter: 'github',
+      target_filter: 'Instapadel',
       profile: 'distribution.mobileprovision',
       build_configuration: 'Release'
     )
@@ -80,15 +80,7 @@ platform :ios do
     increment_build_number(xcodeproj: "instabadel_mobileapp.xcodeproj")
 
     # build_app(workspace: '[Your Project Name].xcworkspace', scheme: '[Your Project Name]')
-     build_app(workspace: "instabadel_mobileapp.xcworkspace", scheme: "instabadel_mobileapp", clean: true,
-      export_method: "app-store",
-      export_options: {
-        provisioningProfiles: {
-          CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier) => CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier) + " AppStore" # Value of this parameter is the name of the Provisioning Profile. By default, it will be "{bundleId} AppStore"
-        }
-      },
-      build_path: "./builds",
-      output_directory: "./builds")
+     build_app(workspace: "instabadel_mobileapp.xcworkspace", scheme: "instabadel_mobileapp")
       upload_to_testflight(      
         api_key: api_key
       )
