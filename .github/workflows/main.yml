@@ -21,7 +21,7 @@ jobs:
         run: yarn install
       - name: Install pods
         run: cd ios && pod install && cd ..
-      - name: Install Ios bundle
-        run: yarn build:ios
+      # - name: Install Ios bundle
+      #   run: yarn build:ios
       - name: Execute Fastlane command
         run: cd ios && fastlane github
