@@ -11,6 +11,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1E11BE2A28D6257000F2FF71 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 1E11BE2928D6257000F2FF71 /* main.jsbundle */; };
 		1E5EAF0628AA5E5100CE0523 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E5EAEF128AA5E1200CE0523 /* Roboto-Black.ttf */; };
 		1E5EAF0728AA5E5100CE0523 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E5EAEF728AA5E1200CE0523 /* Roboto-BlackItalic.ttf */; };
 		1E5EAF0828AA5E5100CE0523 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E5EAEEF28AA5E1200CE0523 /* Roboto-Bold.ttf */; };
@@ -50,6 +51,7 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = instabadel_mobileapp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = instabadel_mobileapp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = instabadel_mobileapp/main.m; sourceTree = "<group>"; };
+		1E11BE2928D6257000F2FF71 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = main.jsbundle; sourceTree = SOURCE_ROOT; };
 		1E5EAEED28AA5E1200CE0523 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		1E5EAEEE28AA5E1200CE0523 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		1E5EAEEF28AA5E1200CE0523 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		1E5EAF0528AA5E3800CE0523 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1E11BE2928D6257000F2FF71 /* main.jsbundle */,
 				1E5EAEF128AA5E1200CE0523 /* Roboto-Black.ttf */,
 				1E5EAEF728AA5E1200CE0523 /* Roboto-BlackItalic.ttf */,
 				1E5EAEEF28AA5E1200CE0523 /* Roboto-Bold.ttf */,
@@ -298,6 +301,7 @@
 				1E5EAF0F28AA5E5100CE0523 /* Roboto-Regular.ttf in Resources */,
 				1E5EAF1028AA5E5100CE0523 /* Roboto-Thin.ttf in Resources */,
 				1E5EAF1128AA5E5100CE0523 /* Roboto-ThinItalic.ttf in Resources */,
+				1E11BE2A28D6257000F2FF71 /* main.jsbundle in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
