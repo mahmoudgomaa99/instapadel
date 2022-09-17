@@ -13,4 +13,5 @@ Navigation.registerComponent('com.myApp.WelcomeScreen', () =>
   gestureHandlerRootHOC(App),
 );
 
+
 AppRegistry.registerComponent(appName, () => App);
