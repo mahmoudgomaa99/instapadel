@@ -6,7 +6,7 @@ import {
   View,
 } from 'react-native';
 import React from 'react';
-import {styles} from '../styles';
+import {styles} from '../../styles';
 import COLORS from 'values/colors';
 import {images} from 'src/assets/images';
 import Svg from 'atoms/Svg';

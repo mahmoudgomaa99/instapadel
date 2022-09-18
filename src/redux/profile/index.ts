@@ -47,6 +47,7 @@ const slice = createSlice({
     builder.addCase(thunks.doGetProfile.fulfilled, (state, action) => {
       if (action.payload.data.data.gender) {
         state.completedProfile = true;
+        state.profile = action.payload.data.data;
       }
     });
     builder.addCase(thunks.doGetProfile.rejected, (state, action) => {});
@@ -66,5 +67,6 @@ const Profile = {
 
 export const selectIsCompletedProfile = (state: RootState) =>
   state.profiles.completedProfile;
+export const selectMyProfile = (state: RootState) => state.profiles.profile;
 
 export default Profile;

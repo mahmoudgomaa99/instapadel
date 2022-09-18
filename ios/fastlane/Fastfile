@@ -51,6 +51,7 @@ platform :ios do
     increment_build_number(xcodeproj: "instabadel_mobileapp.xcodeproj")
   end
   lane :github do |_options|
+    increment_build_number(xcodeproj: "instabadel_mobileapp.xcodeproj")
     create_keychain(
       name: 'login',
       password: 'm.gomaa12',
@@ -77,8 +78,6 @@ platform :ios do
       issuer_id: '69a6de96-5758-47e3-e053-5b8c7c11a4d1',
       key_filepath: 'distribution.p8'
     )
-    increment_build_number(xcodeproj: "instabadel_mobileapp.xcodeproj")
-
     # build_app(workspace: '[Your Project Name].xcworkspace', scheme: '[Your Project Name]')
      build_app(workspace: "instabadel_mobileapp.xcworkspace", scheme: "instabadel_mobileapp")
       upload_to_testflight(      

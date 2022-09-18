@@ -13,8 +13,6 @@ function SvgComponent({size, bgColor, ...props}: TSvgProps) {
   return (
     <Svg
       {...computedSize}
-      width={15}
-      height={18}
       viewBox="0 0 15 18"
       {...props}>
       <G fill="#81e200" data-name="Group 736">

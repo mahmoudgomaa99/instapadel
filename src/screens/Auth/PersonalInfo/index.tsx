@@ -12,7 +12,7 @@ import Button from 'components/molecules/Button';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {useAppDispatch} from 'redux/store';
 import {
-  dateFormatter,
+  bodyDateFormatter,
   dateFormatterForMinDatePicker,
 } from 'src/utils/date_formatter';
 import {unwrapResult} from '@reduxjs/toolkit';
@@ -24,6 +24,7 @@ import {personal_info_initial_values} from 'src/formik/initial_values';
 import {personalInfoSchema} from 'src/formik/schema';
 import Profile from 'redux/profile';
 import {useNavigation} from '@react-navigation/native';
+import COLORS from 'values/colors';
 
 const PersonalInfo = () => {
   const dispatch = useAppDispatch();
@@ -42,7 +43,7 @@ const PersonalInfo = () => {
                 ...values,
                 weight: values.weight.toString(),
                 height: values.height.toString(),
-                birthdate: dateFormatter(values.birthdate),
+                birthdate: bodyDateFormatter(values.birthdate),
               }),
             )
               .then(unwrapResult)
@@ -116,6 +117,7 @@ const PersonalInfo = () => {
                       size={item.svgSize}
                       name={item.name}
                       style={{marginTop: 15}}
+                      bgColor={COLORS.cameraBackGround}
                     />
                   </View>
                   <View>
