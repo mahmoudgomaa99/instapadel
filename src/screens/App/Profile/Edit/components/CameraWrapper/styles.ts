@@ -6,8 +6,8 @@ import Fonts from 'values/fonts';
 export const styles = StyleSheet.create({
   container: {},
   cameraCircleWrapper: {
-    width: 70,
-    height: 70,
+    width: 80,
+    height: 80,
     borderRadius: 50,
     backgroundColor: COLORS.secondery,
     alignItems: 'center',

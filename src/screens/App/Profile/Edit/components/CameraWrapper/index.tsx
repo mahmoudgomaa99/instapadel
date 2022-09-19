@@ -1,20 +1,22 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {styles} from './styles';
-import useLibraryPermission from 'hooks/useLibraryPermission';
 import Svg from 'atoms/Svg';
 
-const CameraWrapper = () => {
-  const {source, pick} = useLibraryPermission();
+const CameraWrapper = ({source, pick, uri}: any) => {
   return (
     <View style={styles.cameraWrapper}>
-      <TouchableOpacity onPress={pick} style={styles.cameraCircleWrapper}>
-        {!source ? (
-          <Svg name="camera" size={30} />
-        ) : (
-          <Image style={styles.cameraCircleWrapper} source={source.assets} />
-        )}
-      </TouchableOpacity>
+      <View style={styles.cameraCircleWrapper}>
+        <Image
+          style={styles.cameraCircleWrapper}
+          source={source ? source.assets : {uri}}
+        />
+        <TouchableOpacity
+          style={{position: 'absolute', bottom: 5}}
+          onPress={pick}>
+          <Svg name="camera" size={25} />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
