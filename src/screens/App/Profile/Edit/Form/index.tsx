@@ -1,21 +1,26 @@
 import {Platform, View} from 'react-native';
 import React from 'react';
 import InputView from 'components/molecules/Input';
-import {RegisterSchema} from 'src/formik/schema';
+import {EditProfileSchema, RegisterSchema} from 'src/formik/schema';
 import {Formik} from 'formik';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {styles} from './styles';
 import {useSelector} from 'react-redux';
-import {selectMyProfile} from 'redux/profile';
+import Profile, {selectMyProfile} from 'redux/profile';
 import Picker from 'components/molecules/Picker';
 import {frequencies, genders, levels} from 'src/screens/Auth/PersonalInfo/data';
 import {dateFormatterForMinDatePicker} from 'utils/date_formatter';
 import DateTimePicker from 'components/molecules/DatePicker';
 import Scales from './Scales';
 import Button from 'components/molecules/Button';
+import {useAppDispatch} from 'redux/store';
+import {selectCountries} from 'redux/constants';
+import {createRequestBody} from '../utils/createReqBody';
 
 const Form = ({source}: any) => {
   const myProfile = useSelector(selectMyProfile);
+  const countries = useSelector(selectCountries);
+  const dispatch = useAppDispatch();
   return (
     <Formik
       initialValues={{
@@ -26,8 +31,14 @@ const Form = ({source}: any) => {
             : myProfile?.birthdate?.replace(/-/g, '/') || '1991/06/10',
         ),
       }}
-      validationSchema={RegisterSchema}
-      onSubmit={(values, action) => {}}>
+      validationSchema={EditProfileSchema}
+      onSubmit={(values, action) => {
+        const body = createRequestBody({
+          ...values,
+          user_avatar: source?.assets,
+        });
+        dispatch(Profile.thunks.doEditProfile(body));
+      }}>
       {(props: any) => (
         <View style={{height: '73%'}}>
           <KeyboardAwareScrollView
@@ -75,6 +86,7 @@ const Form = ({source}: any) => {
               keyboardType="phone-pad"
               containerStyle={styles.input}
               titleStyling={styles.inputTitle}
+              editable={false}
             />
             <View style={{display: 'flex', flexDirection: 'row'}}>
               <Picker
@@ -114,11 +126,11 @@ const Form = ({source}: any) => {
             />
             <Picker
               {...props}
-              name="gender"
+              name="nationality"
               type="secondry"
-              data={genders}
-              title="Gender"
-              required={true}
+              data={countries}
+              title="Nationality"
+              required
             />
             <Picker
               {...props}

@@ -1,0 +1,16 @@
+export const keys: {label: string; type: string}[] = [
+  {label: '_method', type: 'string'},
+  {label: 'weight', type: 'number'},
+  {label: 'height', type: 'number'},
+  {label: 'user_name', type: 'string'},
+  {label: 'birthdate', type: 'date'},
+  {label: 'first_name', type: 'string'},
+  {label: 'last_name', type: 'string'},
+  {label: 'email', type: 'string'},
+  {label: 'phone_number', type: 'string'},
+  {label: 'gender', type: 'string'},
+  {label: 'nationality', type: 'string'},
+  {label: 'frequency_of_playing', type: 'string'},
+  {label: 'level', type: 'string'},
+  {label: 'user_avatar', type: 'string'},
+];

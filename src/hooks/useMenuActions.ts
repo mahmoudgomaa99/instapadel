@@ -7,17 +7,15 @@ import User, {selectCurrentUser} from 'redux/user';
 const useMenuActions = () => {
   const navigation = useNavigation<any>();
   const dispatch = useAppDispatch();
-  const currentUser = useSelector(selectCurrentUser);
   const myProfile = useSelector(selectMyProfile);
-  const profileAction = () =>
-    navigation.navigate('profile', {currentUser: currentUser, myProfile});
+  const profileAction = () => navigation.navigate('profile');
   const chatAction = () => navigation.navigate('chat');
   const faqsAction = () => navigation.navigate('faqs');
   const usernameAction = () => {};
   const logoutAction = () => dispatch(User.logout());
   return {
     usernameAction,
-    usernameTitle: currentUser?.user_name,
+    usernameTitle: myProfile?.user_name,
     profileAction,
     profileTitle: 'Profile',
     chatAction,

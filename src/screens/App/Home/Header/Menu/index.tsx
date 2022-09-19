@@ -8,11 +8,14 @@ import {useSelector} from 'react-redux';
 import {selectCurrentUser} from 'redux/user';
 import Svg from 'atoms/Svg';
 import {menuItems} from './data';
+import {selectMyProfile} from 'redux/profile';
 
 const MenuComponent = () => {
   const action: any = useMenuActions();
   const [visible, setVisible] = useState(false);
   const currentUser = useSelector(selectCurrentUser);
+  const myProfile = useSelector(selectMyProfile);
+
   return (
     <Menu
       visible={visible}
@@ -28,7 +31,7 @@ const MenuComponent = () => {
               fontFamily: Fonts.RobotoMedium,
               maxWidth: 100,
             }}>
-            {currentUser?.user_name}
+            {myProfile?.user_name}
           </Text>
           <Svg name="small_right_arrow" size={8} />
         </TouchableOpacity>

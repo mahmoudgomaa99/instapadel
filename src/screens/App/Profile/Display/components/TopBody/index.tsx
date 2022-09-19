@@ -2,21 +2,21 @@ import {Image, Text, View} from 'react-native';
 import React from 'react';
 import {styles} from './styles';
 
-const TopBody = ({user, profile}: any) => {
+const TopBody = ({profile}: any) => {
   return (
     <View style={styles.container}>
       <View style={styles.top_body_main_wrapper}>
         <View style={styles.top_body_main_wrapper_inner_wrapper}>
           <Image
-            source={{uri: user.avatar}}
+            source={{uri: profile.avatar}}
             style={styles.top_body_main_wrapper_inner_wrapper_image}
           />
           <Text
             style={{
               ...styles.username,
-              fontSize: user.user_name.length < 10 ? 18 : 12,
+              fontSize: profile.user_name.length < 10 ? 18 : 12,
             }}>
-            {user.user_name}
+            {profile.user_name}
           </Text>
         </View>
         <View style={styles.frequencyWrapper}>

@@ -10,16 +10,18 @@ import ScalesWrapper from './components/ScalesWrapper';
 import UserInfo from './components/UserInfo';
 import Button from 'components/molecules/Button';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import {useSelector} from 'react-redux';
+import {selectMyProfile} from 'redux/profile';
 
-const Profile = ({user, profile}: any) => {
-  const {currentUser, myProfile}: any = useRoute().params || {};
+const Profile = ({profile}: any) => {
+  const myProfile = useSelector(selectMyProfile);
   const navigation = useNavigation<any>();
   return (
     <ImageBackground source={images.home.background} style={styles.container}>
       <SafeAreaView>
         <View style={{height: '94%'}}>
           <Header />
-          <TopBody user={user || currentUser} profile={profile || myProfile} />
+          <TopBody profile={profile || myProfile} />
           <ScalesWrapper profile={profile || myProfile} />
           <KeyboardAwareScrollView contentContainerStyle={{padding: 20}}>
             <UserInfo profile={profile || myProfile} />

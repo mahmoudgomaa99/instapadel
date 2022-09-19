@@ -17,7 +17,7 @@ const EditProfile = () => {
       <SafeAreaView>
         <Header />
         <CameraWrapper source={source} pick={pick} uri={myProfile?.avatar} />
-        <Form />
+        <Form source={source} />
       </SafeAreaView>
     </ImageBackground>
   );

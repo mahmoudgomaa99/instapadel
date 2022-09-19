@@ -6,6 +6,7 @@ import Toast from 'react-native-toast-message';
 
 type TInitialValues = {
   completedProfile: boolean;
+  numberOfProfileEdites: number;
   profile?: {
     avatar: string;
     device_token?: string;
@@ -35,6 +36,7 @@ type TInitialValues = {
 const initialValues: TInitialValues = {
   profile: undefined,
   completedProfile: false,
+  numberOfProfileEdites: 0,
 };
 
 const slice = createSlice({
@@ -48,6 +50,7 @@ const slice = createSlice({
       if (action.payload.data.data.gender) {
         state.completedProfile = true;
         state.profile = action.payload.data.data;
+        console.log(action.payload.data.data);
       }
     });
     builder.addCase(thunks.doGetProfile.rejected, (state, action) => {});
@@ -56,6 +59,30 @@ const slice = createSlice({
     });
     builder.addCase(thunks.doCompleteProfile.rejected, (state, action) => {
       console.log(action);
+    });
+    builder.addCase(thunks.doEditProfile.fulfilled, (state, action) => {
+      state.numberOfProfileEdites += 1;
+      Toast.show({
+        type: 'success',
+        text2: action.payload.data.message,
+      });
+    });
+    builder.addCase(thunks.doEditProfile.rejected, (state, action: any) => {
+      console.log(action.payload);
+      if (action?.payload?.errors?.email?.[0] === 'validation.unique') {
+        Toast.show({
+          type: 'error',
+          text2: 'The Email has already been taken.',
+        });
+        return;
+      }
+      if (action?.payload?.errors?.user_name?.[0] === 'validation.unique') {
+        Toast.show({
+          type: 'error',
+          text2: 'The Username has already been taken.',
+        });
+        return;
+      }
     });
   },
 });
@@ -68,5 +95,7 @@ const Profile = {
 export const selectIsCompletedProfile = (state: RootState) =>
   state.profiles.completedProfile;
 export const selectMyProfile = (state: RootState) => state.profiles.profile;
+export const selectNumberOfProfileEdits = (state: RootState) =>
+  state.profiles.numberOfProfileEdites;
 
 export default Profile;

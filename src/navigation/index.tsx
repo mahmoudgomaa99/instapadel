@@ -9,18 +9,23 @@ import {selectCurrentUser, selectIsVerified} from 'src/redux/user';
 import COLORS from 'values/colors';
 import Constant from 'redux/constants';
 import {useAppDispatch} from 'redux/store';
-import Profile, {selectIsCompletedProfile} from 'redux/profile';
+import Profile, {
+  selectIsCompletedProfile,
+  selectNumberOfProfileEdits,
+} from 'redux/profile';
 
 const NavigationHandler = () => {
   const currentUser = useSelector(selectCurrentUser);
   const isVerified = useSelector(selectIsVerified);
   const isProfileCompleted = useSelector(selectIsCompletedProfile);
   const dispatch = useAppDispatch();
-  
+  const numberOfProfileEdits = useSelector(selectNumberOfProfileEdits);
+  console.log(numberOfProfileEdits);
+
   useEffect(() => {
     dispatch(Constant.thunks.doFetchCountries({}));
     dispatch(Profile.thunks.doGetProfile({}));
-  }, [currentUser]);
+  }, [currentUser, dispatch, numberOfProfileEdits]);
 
   const renderSwitch = useCallback(() => {
     if (currentUser && isVerified && isProfileCompleted) {

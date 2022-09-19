@@ -9,47 +9,47 @@ const EmailReg =
 
 export const LoginSchema = Yup.object().shape({
   password: Yup.string()
-    .required('password is required')
+    .required('password is Required')
     .min(8, 'password must be at least 8 characters')
     .matches(includeDigRegExp, 'password must include at least one number')
     .matches(includeCharRegExp, 'password must include at least one character'),
   phone_number: Yup.string()
-    .required('Phone Number is required')
+    .required('Phone Number is Required')
     .matches(phoneRegExp, 'This is not a valid phone number.'),
 });
 
 export const RegisterSchema = Yup.object().shape({
   password: Yup.string()
-    .required('password is required')
+    .required('Password is Required')
     .min(8, 'password must be at least 8 characters')
     .matches(includeDigRegExp, 'password must include at least one number')
     .matches(includeCharRegExp, 'password must include at least one character'),
   phone_number: Yup.string()
-    .required('Phone Number is required')
+    .required('Phone Number is Required')
     .matches(phoneRegExp, 'This is not a valid Phone Number.'),
   email: Yup.string()
-    .required('Email Address is required')
+    .required('Email Address is Required')
     .matches(EmailReg, 'This is not a valid email.'),
-  last_name: Yup.string().required('Last name is required'),
-  first_name: Yup.string().required('First name is required'),
-  user_name: Yup.string().required('Username is required'),
+  last_name: Yup.string().required('Last Name is Required'),
+  first_name: Yup.string().required('First Name is Required'),
+  user_name: Yup.string().required('Username is Required'),
   password_confirmation: Yup.string()
-    .required('Confirm password is required')
+    .required('Confirm password is Required')
     .oneOf([Yup.ref('password'), null], 'The passwords do not match.'),
 });
 
 export const ForgetSchema = Yup.object().shape({
   phone_number: Yup.string()
-    .required('Phone Number is required')
+    .required('Phone Number is Required')
     .matches(phoneRegExp, 'This is not a valid phone number.'),
 });
 
 export const NewPasswordSchema = Yup.object().shape({
   conf_password: Yup.string()
-    .required('Confirm password is required')
+    .required('Confirm password is Required')
     .oneOf([Yup.ref('password'), null], 'The passwords do not match.'),
   password: Yup.string()
-    .required('password is required')
+    .required('password is Required')
     .min(8, 'password must be at least 8 characters')
     .matches(includeDigRegExp, 'password must include at least one number')
     .matches(includeCharRegExp, 'password must include at least one character'),
@@ -57,26 +57,50 @@ export const NewPasswordSchema = Yup.object().shape({
 
 export const personalInfoSchema = Yup.object().shape({
   gender: Yup.string()
-    .required('Gender is required')
-    .typeError('Gender is required'),
+    .required('Gender is Required')
+    .typeError('Gender is Required'),
+  level: Yup.string()
+    .required('Level is Required')
+    .typeError('Level is Required'),
 });
 
 export const CreateTournmentSecondStepSchema = Yup.object().shape({
-  name: Yup.string().required('Tournment Name is required'),
+  name: Yup.string().required('Tournment Name is Required'),
   location: Yup.string()
-    .required('Location is required')
-    .typeError('Location is required'),
+    .required('Location is Required')
+    .typeError('Location is Required'),
 });
 
 export const CreateTournmentSchema = Yup.object().shape({
   participants_type: Yup.string()
-    .required('Participants Type is required')
-    .typeError("Participants Type is required'"),
+    .required('Participants Type is Required')
+    .typeError("Participants Type is Required'"),
   no_of_players: Yup.number()
-    .required('Number of Players is required')
-    .typeError('Number of Players is required'),
+    .required('Number of Players is Required')
+    .typeError('Number of Players is Required'),
   levels_of_players: Yup.string()
-    .required('Participants Level is required')
-    .typeError('Participants Level is required'),
-  description: Yup.string().required('Description is required'),
+    .required('Participants Level is Required')
+    .typeError('Participants Level is Required'),
+  description: Yup.string().required('Description is Required'),
+});
+
+export const EditProfileSchema = Yup.object().shape({
+  phone_number: Yup.string()
+    .required('Phone Number is Required')
+    .matches(phoneRegExp, 'This is not a valid Phone Number.'),
+  email: Yup.string()
+    .required('Email Address is required')
+    .matches(EmailReg, 'This is not a valid email.'),
+  last_name: Yup.string().required('Last name is Required'),
+  first_name: Yup.string().required('First name is Required'),
+  user_name: Yup.string().required('Username is Required'),
+  gender: Yup.string()
+    .required('Gender is Required')
+    .typeError('Gender is Required'),
+  level: Yup.string()
+    .required('Level is Required')
+    .typeError('Level is Required'),
+  nationality: Yup.string()
+    .required('Nationality is Required')
+    .typeError('Nationality is Required'),
 });
