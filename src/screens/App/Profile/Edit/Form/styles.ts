@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
   },
   rawInput: {
     paddingHorizontal: 10,
-    width: w*0.5
+    width: w * 0.5,
   },
   rowWraper: {
     display: 'flex',
@@ -25,4 +25,10 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   inputTitle: {marginLeft: 18, color: COLORS.white},
+  bottomItemWrapper: {
+    paddingHorizontal: 15,
+    flexDirection: 'row-reverse',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
 });

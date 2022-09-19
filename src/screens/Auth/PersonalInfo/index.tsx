@@ -117,7 +117,7 @@ const PersonalInfo = () => {
                       size={item.svgSize}
                       name={item.name}
                       style={{marginTop: 15}}
-                      bgColor={COLORS.cameraBackGround}
+                      bgColor={COLORS.secondery}
                     />
                   </View>
                   <View>
