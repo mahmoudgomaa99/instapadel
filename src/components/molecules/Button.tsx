@@ -13,7 +13,7 @@ import {BorderRadius, MarginsAndPaddings} from 'values/Dimensions';
 import COLORS from 'values/colors';
 import Fonts from 'values/fonts';
 
-type TType = 'primary' | 'secondry' | 'ticket_type';
+type TType = 'primary' | 'secondry' | 'ticket_type' | 'warning';
 
 type TButton = {
   isLoading?: boolean;
@@ -83,4 +83,18 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   txt_ticket_type: {color: COLORS.primary, fontWeight: '700', fontSize: 17},
+  warning: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 35,
+    width: '100%',
+    backgroundColor: COLORS.warning,
+    paddingHorizontal: 10,
+    borderRadius: BorderRadius.s,
+  },
+  txt_warning: {
+    color: COLORS.white,
+    fontSize: 15,
+    fontWeight: '500',
+  },
 });

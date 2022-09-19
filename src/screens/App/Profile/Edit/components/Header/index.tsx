@@ -3,6 +3,7 @@ import React from 'react';
 import {styles} from './styles';
 import Svg from 'atoms/Svg';
 import {useNavigation} from '@react-navigation/native';
+import Button from 'components/molecules/Button';
 
 const Header = () => {
   const navigation = useNavigation<any>();
@@ -13,6 +14,9 @@ const Header = () => {
           <Svg name="left_arrow" size={12} />
         </TouchableOpacity>
         <Text style={styles.title}>Edit Profile</Text>
+      </View>
+      <View style={styles.titleContainer}>
+        <Button type="warning" label="Deactivate Account" />
       </View>
     </View>
   );

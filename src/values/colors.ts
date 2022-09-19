@@ -18,6 +18,7 @@ const COLORS = {
   red: '#ff0000',
   openGreen: '#81E200',
   darkBlue: '#000D1E',
+  warning: '#CC0505',
 };
 
 export default COLORS;
