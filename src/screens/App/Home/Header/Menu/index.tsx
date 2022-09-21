@@ -5,7 +5,6 @@ import useMenuActions from 'hooks/useMenuActions';
 import {styles} from '../styles';
 import Fonts from 'values/fonts';
 import {useSelector} from 'react-redux';
-import {selectCurrentUser} from 'redux/user';
 import Svg from 'atoms/Svg';
 import {menuItems} from './data';
 import {selectMyProfile} from 'redux/profile';
@@ -13,7 +12,6 @@ import {selectMyProfile} from 'redux/profile';
 const MenuComponent = () => {
   const action: any = useMenuActions();
   const [visible, setVisible] = useState(false);
-  const currentUser = useSelector(selectCurrentUser);
   const myProfile = useSelector(selectMyProfile);
 
   return (

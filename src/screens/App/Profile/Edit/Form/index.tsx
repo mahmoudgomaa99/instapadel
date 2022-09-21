@@ -16,11 +16,13 @@ import Button from 'components/molecules/Button';
 import {useAppDispatch} from 'redux/store';
 import {selectCountries} from 'redux/constants';
 import {createRequestBody} from '../utils/createReqBody';
+import { useLoadingSelector } from 'redux/selectors';
 
 const Form = ({source}: any) => {
   const myProfile = useSelector(selectMyProfile);
   const countries = useSelector(selectCountries);
   const dispatch = useAppDispatch();
+  const isLoading=useLoadingSelector(Profile.thunks.doEditProfile)
   return (
     <Formik
       initialValues={{
@@ -145,7 +147,7 @@ const Form = ({source}: any) => {
             type="secondry"
             label="SAVE CHANGES"
             onPress={props.handleSubmit}
-            // isLoading={isLoading}
+            isLoading={isLoading}
           />
         </View>
       )}
