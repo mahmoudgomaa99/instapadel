@@ -10,7 +10,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "build:ios": "react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios' --assets-dest ./ios",
     "postinstall": "appcenter codepush release-react -a mahmoudgomaa99/Instapadel -d Staging",
-    "afterinstall": "appcenter codepush release-react -a mahmoudgomaa99/Instapadel -d Production"
+    "postinstall_android":"appcenter codepush release-react -a mahmoudgomaa99/instapadel_android -d Staging"
   },
   "dependencies": {
     "@gorhom/bottom-sheet": "^4.4.5",

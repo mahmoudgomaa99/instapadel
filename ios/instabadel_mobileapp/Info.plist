@@ -22,8 +22,6 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
-	<!-- <key>CodePushPublicKey</key>
-	<string>FNU7i6ZcT7IDD3_iEK2v7kvNvCR-CSnC6DGKU</string> -->
 	<key>CodePushDeploymentKey</key>
 	<string>FNU7i6ZcT7IDD3_iEK2v7kvNvCR-CSnC6DGKU</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
