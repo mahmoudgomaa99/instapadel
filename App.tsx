@@ -6,10 +6,19 @@ import {store, useAppDispatch} from 'src/redux/store';
 import {Provider} from 'react-redux';
 import Toast from 'react-native-toast-message';
 import {toastConfig} from 'src/config/Toast';
-import Constant from 'redux/constants';
-import Profile from 'redux/profile';
+import CodePush from 'react-native-code-push';
+
+let CodePushOptions = {
+  checkFrequency: CodePush.CheckFrequency.MANUAL,
+};
 
 const App = () => {
+  useEffect(() => {
+    CodePush.sync({
+      updateDialog: {title: 'A new update is Available'},
+      installMode: CodePush.InstallMode.IMMEDIATE,
+    }).catch(e => Toast.show({type: 'error', text2: e}));
+  }, []);
   return (
     <Provider store={store}>
       <StatusBar
@@ -23,4 +32,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default CodePush(CodePushOptions)(App);

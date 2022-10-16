@@ -1,5 +1,5 @@
 import {Platform, View} from 'react-native';
-import React, {useRef} from 'react';
+import React from 'react';
 import InputView from 'components/molecules/Input';
 import {RegisterSchema} from 'src/formik/schema';
 import {register_initial_values} from 'src/formik/initial_values';
@@ -7,15 +7,13 @@ import {Formik} from 'formik';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import Button from 'components/molecules/Button';
 import {styles} from './styles';
-import {useNavigation, useRoute} from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 import {useAppDispatch} from 'redux/store';
 import User from 'redux/user';
 import {useLoadingSelector} from 'redux/selectors';
 import useFormDataCreater from 'hooks/useFormDataCreater';
 import {signup_keys} from './data';
 import Toast from 'react-native-toast-message';
-import axios, {AxiosError} from 'axios';
-import BASE_URL from '../../../../../.env.json';
 import useTokensSetter from 'hooks/useTokens/useTokenSetter';
 import {unwrapResult} from '@reduxjs/toolkit';
 

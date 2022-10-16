@@ -24,6 +24,12 @@ import Net from './Net';
 import Oprojects from './Oprojects';
 import Flag from './Flag';
 import Edit from './Edit';
+import Level from './Level';
+import CslenderFill from './CalenderFill';
+import Location from './Location';
+import Share from './Share';
+import Player from './Player';
+import Prize from './Prize';
 
 const svgs = {
   default: SvgComponent,
@@ -52,6 +58,12 @@ const svgs = {
   oprojects: Oprojects,
   flag: Flag,
   edit: Edit,
+  level: Level,
+  calenderFill: CslenderFill,
+  location: Location,
+  share: Share,
+  player: Player,
+  prize: Prize,
 };
 
 export default svgs;

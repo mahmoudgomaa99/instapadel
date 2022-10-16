@@ -7,10 +7,14 @@ import {styles} from './BottomNav';
 import {ImageBackground} from 'react-native';
 import {images} from 'src/assets/images';
 import COLORS from 'values/colors';
+import TournmentDetails from 'src/screens/App/Tournments/Details';
+import Waiting from 'src/screens/App/Tournments/Details/WaitingForApproval';
 
 export type TTournmentStack = {
   CreateTournment: undefined;
   JoinTournment: undefined;
+  tournmentDetails: undefined;
+  waiting: undefined;
 };
 
 const Stack = createNativeStackNavigator<TTournmentStack>();
@@ -26,6 +30,16 @@ const TournmentStack = () => {
         <Stack.Screen
           name="JoinTournment"
           component={JoinTournment}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="tournmentDetails"
+          component={TournmentDetails}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="waiting"
+          component={Waiting}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

@@ -7,7 +7,7 @@ import {useNavigation} from '@react-navigation/native';
 import {useAppDispatch} from 'redux/store';
 import Tournment from 'redux/tournment';
 
-const CreateTournmentHeader = () => {
+const TournmentHeader = ({title}: any) => {
   const navigation = useNavigation();
   const dispatch = useAppDispatch();
   return (
@@ -19,9 +19,9 @@ const CreateTournmentHeader = () => {
         }}>
         <Svg name="left_arrow" size={12} />
       </TouchableOpacity>
-      <Text style={styles.title}>Create New Tournament</Text>
+      <Text style={styles.title}>{title}</Text>
     </View>
   );
 };
 
-export default CreateTournmentHeader;
+export default TournmentHeader;

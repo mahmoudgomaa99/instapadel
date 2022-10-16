@@ -1,6 +1,8 @@
 const COLORS = {
   backGround: '#000D19',
   secondery: '#004077',
+  openSecondery: '#175183',
+  cardBg: '#000D1E',
   secButtonBG: '#81E200',
   eyeColor: '#0059a5',
   cameraBackGround: '#07244D',

@@ -8,11 +8,7 @@ const EmailReg =
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 export const LoginSchema = Yup.object().shape({
-  password: Yup.string()
-    .required('password is Required')
-    .min(8, 'password must be at least 8 characters')
-    .matches(includeDigRegExp, 'password must include at least one number')
-    .matches(includeCharRegExp, 'password must include at least one character'),
+  password: Yup.string().required('password is Required'),
   phone_number: Yup.string()
     .required('Phone Number is Required')
     .matches(phoneRegExp, 'This is not a valid phone number.'),
@@ -103,4 +99,14 @@ export const EditProfileSchema = Yup.object().shape({
   nationality: Yup.string()
     .required('Nationality is Required')
     .typeError('Nationality is Required'),
+});
+
+export const JoinTournmentCodeSchema = Yup.object().shape({
+  code: Yup.string().required('Tournment Code is Required'),
+});
+
+export const JoinTournmentTeammateSchema = Yup.object().shape({
+  teammate_username: Yup.string().required(
+    'Teammate Username is Required',
+  ),
 });

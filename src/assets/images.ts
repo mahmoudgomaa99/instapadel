@@ -2,7 +2,7 @@ export const images: TImages = {
   auth: {
     otp: {
       lock: require('./lock.png'),
-      lock_animation:require('./lock.json'),
+      lock_animation: require('./lock.json'),
     },
   },
   home: {
@@ -14,6 +14,10 @@ export const images: TImages = {
       multiRound: require('./multiRound.png'),
       legue: require('./Legue.png'),
     },
+    displayTournment: {
+      test: require('./test.png'),
+    },
+    waiting: require('./pending.png'),
   },
 };
 
@@ -28,6 +32,10 @@ type TImages = {
       multiRound: any;
       legue: any;
     };
+    displayTournment: {
+      test: any;
+    };
+    waiting: any;
   };
 };
 type TAuth = {

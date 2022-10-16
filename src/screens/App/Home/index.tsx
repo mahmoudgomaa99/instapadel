@@ -1,22 +1,13 @@
-import {
-  Dimensions,
-  ImageBackground,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import {Text, View} from 'react-native';
 import React from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {images} from 'src/assets/images';
 import Svg from 'atoms/Svg';
 import {styles} from './styles';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {useSelector} from 'react-redux';
-import User, {selectCurrentUser} from 'redux/user';
-import Fonts from 'values/fonts';
+import {selectCurrentUser} from 'redux/user';
 import Header from './Header';
 import {useNavigation} from '@react-navigation/native';
-import {useAppDispatch} from 'redux/store';
 
 const Home = () => {
   const currentUser = useSelector(selectCurrentUser);

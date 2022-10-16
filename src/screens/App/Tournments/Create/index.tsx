@@ -3,7 +3,6 @@ import React, {useEffect, useState} from 'react';
 import {images} from 'src/assets/images';
 import {styles} from './styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import CreateTournmentHeader from './components/Header';
 import Paginator from './components/Paginator';
 import {Formik} from 'formik';
 import Step1 from './Steps/Step1';
@@ -16,6 +15,7 @@ import Tournment from 'redux/tournment';
 import {useLoadingSelector} from 'redux/selectors';
 import {useNavigation} from '@react-navigation/native';
 import {createRequestBody} from './utils/createReqBody';
+import TournmentHeader from '../components/Header';
 
 const CreateTournment = () => {
   const navigation = useNavigation();
@@ -44,7 +44,7 @@ const CreateTournment = () => {
         }}>
         {(props: any) => (
           <SafeAreaView style={{height: Dimensions.get('window').height}}>
-            <CreateTournmentHeader />
+            <TournmentHeader title="Create Tournament" />
             <Paginator step={step} setStep={setStep} />
             {step === 1 && <Step1 props={props} setStep={setStep} />}
             {step === 2 && <Step2 props={props} setStep={setStep} />}

@@ -25,6 +25,7 @@
 		1E5EAF1028AA5E5100CE0523 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E5EAEF628AA5E1200CE0523 /* Roboto-Thin.ttf */; };
 		1E5EAF1128AA5E5100CE0523 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E5EAEF228AA5E1200CE0523 /* Roboto-ThinItalic.ttf */; };
 		1ECDE7E028D65794001903DC /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 1ECDE7DF28D65794001903DC /* assets */; };
+		1EFC4AB228E9CCA8001EF6F7 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1EFC4AAF28E9CCA8001EF6F7 /* AppCenter-Config.plist */; };
 		77A8C3F8D7A8264978E8D534 /* libPods-instabadel_mobileapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11187DD0BD4A7914152A1E3E /* libPods-instabadel_mobileapp.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		FA6FF97299084FC5BCD6AF87 /* libPods-instabadel_mobileapp-instabadel_mobileappTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CA6D09C857CA6D3469578D /* libPods-instabadel_mobileapp-instabadel_mobileappTests.a */; };
@@ -37,6 +38,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = instabadel_mobileapp;
+		};
+		1EA6676A28E9B3C2001DB185 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EA6676528E9B3C1001DB185 /* CodePush.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = CodePush;
+		};
+		1EA6676C28E9B3C2001DB185 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EA6676528E9B3C1001DB185 /* CodePush.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F886647B1F4ADB500036D01B;
+			remoteInfo = "CodePush-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -65,12 +80,17 @@
 		1E5EAEF628AA5E1200CE0523 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		1E5EAEF728AA5E1200CE0523 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
 		1E5EAEF828AA5E1200CE0523 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		1EA6676528E9B3C1001DB185 /* CodePush.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CodePush.xcodeproj; path = "../node_modules/react-native-code-push/ios/CodePush.xcodeproj"; sourceTree = "<group>"; };
+		1EA6676F28E9B467001DB185 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		1ECDE7DF28D65794001903DC /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		1EFC4AAF28E9CCA8001EF6F7 /* AppCenter-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "instabadel_mobileapp/AppCenter-Config.plist"; sourceTree = "<group>"; };
 		4B991CE4F77C3D1AA750228D /* Pods-instabadel_mobileapp-instabadel_mobileappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instabadel_mobileapp-instabadel_mobileappTests.release.xcconfig"; path = "Target Support Files/Pods-instabadel_mobileapp-instabadel_mobileappTests/Pods-instabadel_mobileapp-instabadel_mobileappTests.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = instabadel_mobileapp/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		863FEC1966A56EF69EDBF4B6 /* Pods-instabadel_mobileapp.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instabadel_mobileapp.staging.xcconfig"; path = "Target Support Files/Pods-instabadel_mobileapp/Pods-instabadel_mobileapp.staging.xcconfig"; sourceTree = "<group>"; };
 		B6F07333D3FF775BFA7AB241 /* Pods-instabadel_mobileapp-instabadel_mobileappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instabadel_mobileapp-instabadel_mobileappTests.debug.xcconfig"; path = "Target Support Files/Pods-instabadel_mobileapp-instabadel_mobileappTests/Pods-instabadel_mobileapp-instabadel_mobileappTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C3CA6D09C857CA6D3469578D /* libPods-instabadel_mobileapp-instabadel_mobileappTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-instabadel_mobileapp-instabadel_mobileappTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F430FFE7A9817F732466BEF4 /* Pods-instabadel_mobileapp-instabadel_mobileappTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instabadel_mobileapp-instabadel_mobileappTests.staging.xcconfig"; path = "Target Support Files/Pods-instabadel_mobileapp-instabadel_mobileappTests/Pods-instabadel_mobileapp-instabadel_mobileappTests.staging.xcconfig"; sourceTree = "<group>"; };
 		F66A530656F754A5A1DF2E87 /* Pods-instabadel_mobileapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instabadel_mobileapp.debug.xcconfig"; path = "Target Support Files/Pods-instabadel_mobileapp/Pods-instabadel_mobileapp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,9 +164,19 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		1EA6676628E9B3C1001DB185 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EA6676B28E9B3C2001DB185 /* libCodePush.a */,
+				1EA6676D28E9B3C2001DB185 /* libCodePush.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1EA6676F28E9B467001DB185 /* libz.tbd */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				11187DD0BD4A7914152A1E3E /* libPods-instabadel_mobileapp.a */,
 				C3CA6D09C857CA6D3469578D /* libPods-instabadel_mobileapp-instabadel_mobileappTests.a */,
@@ -157,6 +187,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				1EA6676528E9B3C1001DB185 /* CodePush.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -164,6 +195,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				1EFC4AAF28E9CCA8001EF6F7 /* AppCenter-Config.plist */,
 				1ECDE7DF28D65794001903DC /* assets */,
 				1E5EAF0528AA5E3800CE0523 /* Resources */,
 				13B07FAE1A68108700A75B9A /* instabadel_mobileapp */,
@@ -194,6 +226,8 @@
 				085D30AA040A18D9A11AAF0E /* Pods-instabadel_mobileapp.release.xcconfig */,
 				B6F07333D3FF775BFA7AB241 /* Pods-instabadel_mobileapp-instabadel_mobileappTests.debug.xcconfig */,
 				4B991CE4F77C3D1AA750228D /* Pods-instabadel_mobileapp-instabadel_mobileappTests.release.xcconfig */,
+				863FEC1966A56EF69EDBF4B6 /* Pods-instabadel_mobileapp.staging.xcconfig */,
+				F430FFE7A9817F732466BEF4 /* Pods-instabadel_mobileapp-instabadel_mobileappTests.staging.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -272,6 +306,12 @@
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1EA6676628E9B3C1001DB185 /* Products */;
+					ProjectRef = 1EA6676528E9B3C1001DB185 /* CodePush.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* instabadel_mobileapp */,
@@ -279,6 +319,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1EA6676B28E9B3C2001DB185 /* libCodePush.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCodePush.a;
+			remoteRef = 1EA6676A28E9B3C2001DB185 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1EA6676D28E9B3C2001DB185 /* libCodePush.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCodePush.a;
+			remoteRef = 1EA6676C28E9B3C2001DB185 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
@@ -305,6 +362,7 @@
 				1E5EAF0F28AA5E5100CE0523 /* Roboto-Regular.ttf in Resources */,
 				1E5EAF1028AA5E5100CE0523 /* Roboto-Thin.ttf in Resources */,
 				1E5EAF1128AA5E5100CE0523 /* Roboto-ThinItalic.ttf in Resources */,
+				1EFC4AB228E9CCA8001EF6F7 /* AppCenter-Config.plist in Resources */,
 				1E11BE2A28D6257000F2FF71 /* main.jsbundle in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
@@ -554,7 +612,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = T2F9Q79X6G;
 				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -587,7 +645,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = T2F9Q79X6G;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = instabadel_mobileapp/Info.plist;
@@ -608,6 +666,129 @@
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
+		};
+		1EA6676228E9A382001DB185 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODEPUSH_KEY = "FNU7i6ZcT7IDD3_iEK2v7kvNvCR-CSnC6DGKU";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				Multi_Deployment_Config = "$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Staging;
+		};
+		1EA6676328E9A382001DB185 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 863FEC1966A56EF69EDBF4B6 /* Pods-instabadel_mobileapp.staging.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 14;
+				DEVELOPMENT_TEAM = T2F9Q79X6G;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				INFOPLIST_FILE = instabadel_mobileapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.oprojects.instabadel-mobileapp";
+				PRODUCT_NAME = instabadel_mobileapp;
+				PROVISIONING_PROFILE_SPECIFIER = instapadel_mobileApp_prod;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Staging;
+		};
+		1EA6676428E9A382001DB185 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F430FFE7A9817F732466BEF4 /* Pods-instabadel_mobileapp-instabadel_mobileappTests.staging.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = T2F9Q79X6G;
+				INFOPLIST_FILE = instabadel_mobileappTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/instabadel_mobileapp.app/instabadel_mobileapp";
+			};
+			name = Staging;
 		};
 		83CBBA201A601CBA00E9B192 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -638,6 +819,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODEPUSH_KEY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -669,6 +851,7 @@
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
+				Multi_Deployment_Config = "";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
@@ -710,6 +893,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODEPUSH_KEY = "aLrqKbsxhxdrIDBLnzIfpMwxPnqWZ5-LBC2_O";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -734,6 +918,7 @@
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
+				Multi_Deployment_Config = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
@@ -754,6 +939,7 @@
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
 				00E356F71AD99517003FC87E /* Release */,
+				1EA6676428E9A382001DB185 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -763,6 +949,7 @@
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
 				13B07F951A680F5B00A75B9A /* Release */,
+				1EA6676328E9A382001DB185 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -772,6 +959,7 @@
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
 				83CBBA211A601CBA00E9B192 /* Release */,
+				1EA6676228E9A382001DB185 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

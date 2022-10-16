@@ -7,7 +7,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {useSelector} from 'react-redux';
 import {selectCurrentUser, selectIsVerified} from 'src/redux/user';
 import COLORS from 'values/colors';
-import Constant from 'redux/constants';
+import Constant, {selectCountries, selectLocations} from 'redux/constants';
 import {useAppDispatch} from 'redux/store';
 import Profile, {
   selectIsCompletedProfile,
@@ -20,11 +20,17 @@ const NavigationHandler = () => {
   const isProfileCompleted = useSelector(selectIsCompletedProfile);
   const dispatch = useAppDispatch();
   const numberOfProfileEdits = useSelector(selectNumberOfProfileEdits);
-  console.log(numberOfProfileEdits);
+  const locations = useSelector(selectLocations) || [];
+  const countries = useSelector(selectCountries) || [];
 
   useEffect(() => {
-    dispatch(Constant.thunks.doFetchCountries({}));
     dispatch(Profile.thunks.doGetProfile({}));
+    if (countries.length === 0 || locations.length === 0) {
+      dispatch(Constant.thunks.doFetchCountries({}));
+      dispatch(Constant.thunks.doFetchLevels({}));
+      dispatch(Constant.thunks.doFetchLocations({}));
+      dispatch(Constant.thunks.doFetchParticpantTypes({}));
+    }
   }, [currentUser, dispatch, numberOfProfileEdits]);
 
   const renderSwitch = useCallback(() => {

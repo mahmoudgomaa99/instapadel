@@ -15,12 +15,12 @@ type TInput = {
   name: string;
   handleChange: any;
   handleBlur: any;
-  title: string;
+  title?: string;
   values: any;
   containerStyling?: any;
   titleStyling?: any;
   eye?: boolean;
-  height: number;
+  height?: number;
   mainContainerStyle: any;
 };
 
@@ -115,5 +115,6 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.backGround,
     borderColor: COLORS.secondery,
     fontSize: 12,
+    
   },
 });

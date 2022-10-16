@@ -29,11 +29,25 @@ const Button = ({
 }: TouchableOpacityProps & TButton) => {
   return (
     <TouchableOpacity {...props}>
-      <View style={styles[type] || styles.primary}>
+      <View
+        style={
+          {
+            ...styles[type],
+            backgroundColor: props.disabled
+              ? '#D1D1D1'
+              : styles[type].backgroundColor,
+          } || {...styles.primary}
+        }>
         {isLoading ? (
           <ActivityIndicator color={COLORS.secondery} />
         ) : (
-          <Text style={styles[`txt_${type}`] || styles.txt_primary}>
+          <Text
+            style={
+              {
+                ...styles[`txt_${type}`],
+                color: props.disabled ? '#A1A1A1' : styles[`txt_${type}`].color,
+              } || styles.txt_primary
+            }>
             {label}
           </Text>
         )}
